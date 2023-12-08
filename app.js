@@ -8,7 +8,9 @@ let a_actual = fecha_actual.getFullYear();
 let dia = document.querySelector("#dia");
 let mes = document.querySelector("#mes");
 let anio = document.querySelector("#anio");
-let salida = document.querySelector("#salida");
+let years = document.querySelector("#years");
+let months = document.querySelector("#months");
+let days = document.querySelector("#days");
 const btn = document.querySelector("#btn");
 
 //declaramos los contadores y los incializamos en 0
@@ -33,5 +35,8 @@ btn.addEventListener("click", () => {
     anio++;
     anios++;
   }
-  salida.textContent = `${anios} años, ${meses} meses, ${dias} dias`;
+
+  years.textContent = anios;
+  months.textContent = meses;
+  days.textContent = dias;
 });

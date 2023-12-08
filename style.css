@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  margin: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.form label {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+}
+
+.form input {
+  width: 70px;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  background-color: blueviolet;
+  border-radius: 100%;
+  border: none;
+}
+
+button img {
+  width: 30px;
+}
+
+p {
+  display: inline;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
       type="image/png"
@@ -14,11 +14,33 @@
     <title>Frontend Mentor | Age calculator app</title>
   </head>
   <body>
-    <input id="dia" type="text" placeholder="dia" /> <br />
-    <input id="mes" type="text" placeholder="mes" /> <br />
-    <input id="anio" type="text" placeholder="año" /> <br />
-    <button id="btn">Calcular</button>
-    <p id="salida"></p>
+    <div class="card">
+      <div class="form">
+        <label for="dia">dia</label>
+        <input id="dia" type="text" placeholder="dia" />
+        <label for="mes">mes</label>
+        <input id="mes" type="text" placeholder="mes" />
+        <label for="anio">año</label>
+        <input id="anio" type="text" placeholder="año" />
+      </div>
+      <button id="btn">
+        <img src="./assets/images/icon-arrow.svg" alt="" />
+      </button>
+      <div class="result">
+        <div class="years">
+          <p id="years">--</p>
+          <p>years</p>
+        </div>
+        <div class="months">
+          <p id="months">--</p>
+          <p>months</p>
+        </div>
+        <div class="days">
+          <p id="days">--</p>
+          <p>days</p>
+        </div>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
