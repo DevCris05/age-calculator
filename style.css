@@ -1,43 +1,166 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --white2: hsl(0, 0%, 94%);
+  --grey: hsl(0, 0%, 86%);
+  --grey2: hsl(0, 1%, 44%);
+  --black: hsl(0, 0%, 8%);
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.card {
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  background-color: var(--white2);
+}
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  width: 90%;
+  border: none;
+  padding: 10px;
+  background-color: var(--white);
+  border-radius: 10px 10px 40px 10px;
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .form {
-  margin: 20px;
-  position: relative;
-  top: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.form label {
-  position: relative;
-  bottom: 20px;
-  left: 20px;
+.day,
+.month,
+.year {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
 }
 
-.form input {
-  width: 70px;
+label {
+  color: var(--grey2);
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  color: var(--black);
+  font-size: 1.7em;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid var(--purple);
+  box-shadow: 0 0 5px var(--purple);
+}
+
+hr {
+  background-color: var(--white2);
+  height: 1.5px;
+  border: none;
+  margin: 40px 0;
 }
 
 button {
-  width: 60px;
-  height: 60px;
-  background-color: blueviolet;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   border: none;
+  background-color: var(--purple);
+  position: absolute;
+  top: 90px;
+  right: 160px;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background-color: var(--black);
 }
 
 button img {
-  width: 30px;
+  width: 20px;
+}
+
+.result {
+  padding: 0 40px;
+  margin: 10px 0 40px;
+}
+
+.years,
+.months,
+.days {
+  display: flex;
+  justify-content: center;
 }
 
 p {
-  display: inline;
+  font-size: 3.3rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+}
+
+#years,
+#months,
+#days {
+  font-size: 4em;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--purple);
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 630px) {
+  .card {
+    width: 530px;
+  }
+
+  .form {
+    margin-top: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  button {
+    top: 100px;
+    left: 470px;
+  }
+
+  .years,
+  .months,
+  .days {
+    display: flex;
+    justify-content: start;
+  }
 }

@@ -23,6 +23,14 @@ btn.addEventListener("click", () => {
   dia = parseInt(dia.value);
   mes = parseInt(mes.value);
   anio = parseInt(anio.value);
+  if (
+    dia <= 0 ||
+    (dia > 31 && mes <= 0) ||
+    (mes > 12 && anio <= 0) ||
+    anio > m_actual
+  ) {
+  }
+
   while (dia < d_actual) {
     dia++;
     dias++;

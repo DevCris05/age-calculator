@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -14,33 +20,42 @@
     <title>Frontend Mentor | Age calculator app</title>
   </head>
   <body>
-    <div class="card">
-      <div class="form">
-        <label for="dia">dia</label>
-        <input id="dia" type="text" placeholder="dia" />
-        <label for="mes">mes</label>
-        <input id="mes" type="text" placeholder="mes" />
-        <label for="anio">año</label>
-        <input id="anio" type="text" placeholder="año" />
+    <main>
+      <div class="card">
+        <form action="index.html" class="form">
+          <div class="day">
+            <label for="dia">DAY</label>
+            <input id="dia" type="text" placeholder="DD" />
+          </div>
+          <div class="month">
+            <label for="mes">MONTH</label>
+            <input id="mes" type="text" placeholder="MM" />
+          </div>
+          <div class="year">
+            <label for="anio">YEAR</label>
+            <input id="anio" type="text" placeholder="YYYY" />
+          </div>
+        </form>
+        <hr />
+        <button type="button" id="btn">
+          <img src="./assets/images/icon-arrow.svg" alt="" />
+        </button>
+        <div class="result">
+          <div class="years">
+            <p id="years">--</p>
+            <p>years</p>
+          </div>
+          <div class="months">
+            <p id="months">--</p>
+            <p>months</p>
+          </div>
+          <div class="days">
+            <p id="days">--</p>
+            <p>days</p>
+          </div>
+        </div>
       </div>
-      <button id="btn">
-        <img src="./assets/images/icon-arrow.svg" alt="" />
-      </button>
-      <div class="result">
-        <div class="years">
-          <p id="years">--</p>
-          <p>years</p>
-        </div>
-        <div class="months">
-          <p id="months">--</p>
-          <p>months</p>
-        </div>
-        <div class="days">
-          <p id="days">--</p>
-          <p>days</p>
-        </div>
-      </div>
-    </div>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
